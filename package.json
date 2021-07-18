@@ -1,0 +1,19 @@
+{
+  "name": "labforward-assignment",
+  "version": "1.0.0",
+  "description": "Engineering JavaScript - Integration Team - Take-Home Challenge",
+  "scripts": {
+    "start-instrument": "node ./instrument/server.js 9889",
+    "start-driver": "node ./driver/client.js 9889"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/varad11/labforward-assignment.git"
+  },
+  "author": "Varad Shevade",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/varad11/labforward-assignment/issues"
+  },
+  "homepage": "https://github.com/varad11/labforward-assignment#readme"
+}
