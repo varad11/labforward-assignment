@@ -1,23 +1,33 @@
 const net = require("net");
+const getReadings = require("./service/readings");
 
 //port from terminal args
 //check package.json for command details
 const port = process.argv.slice(2)[0];
-
+console.log("*********INSTRUMENT APP*********");
 try {
     //create TCP server
-    const server = net.createServer((client) => {
-        //here client events received
-        console.log("event requested", client);
+    const server = net.createServer((driver) => {
+        console.log("driver connected");
+        driver.on("data", async (data) => {
+            //this event invoked when "data" received on socket.
+            console.log("\nReceived", `0x${data}`);
 
-        const interval = setInterval(() => {
-            client.write("hello");
-        }, 3000);
+            //fetch the dummy readings for input command
+            const reading = await getReadings(data);
 
-        client.on("end", () => {
-            clearInterval(interval);
-            console.log("client disconnected:", client);
+            //send the reading back to driver
+            console.log("Sending: ", reading && reading.value || null);
+            driver.write(JSON.stringify(reading));
+        })
+
+        driver.on("end", () => {            
+            console.log("driver disconnected");
         });
+
+        driver.on("error", (err) => {            
+            console.error(err.message);
+        })
     });
 
     //set max drivers that are allowed to connect
@@ -25,7 +35,8 @@ try {
 
     //start listening for events on given port
     server.listen(port, () => {
-        console.log("instrument is available on address:", server.address());
+        console.log("Instrument online");
+        console.log(`Listening on port: ${port}`);
     });
 
 } catch (error) {
