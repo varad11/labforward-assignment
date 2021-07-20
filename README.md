@@ -10,7 +10,7 @@ An artificaial delay in instrument app is added to demonstrate delay in receivin
 <br/>
 No 3rd party libraries used in development, everything done with in built modules.
 <br/>
-Basic validations and guards added with exceptional handling.
+Basic validations and guards added with exception handling.
 <br/>
 Total of 4-5 hours was spent from start to end.
 
