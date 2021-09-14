@@ -1,5 +1,5 @@
-# labforward-assignment
-Engineering JavaScript - Integration Team - Take-Home Challenge
+# node-socket-sim
+Node.js server that establish and communicate with each other through web sockets. This is a simple simulation between to instruments.
 
 ## Scope
 The project has 2 Node.js applications.
