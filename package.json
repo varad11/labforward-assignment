@@ -1,7 +1,7 @@
 {
   "name": "node-socket-sim",
   "version": "1.0.0",
-  "description": "Node.js server that establish and communicate with each other through web sockets. This is a simple simulation between to instruments.",
+  "description": "This is a simple simulation between 2 instruments. The instruments here are 2 node.js applications, where one is client and other is a server. The communication between both is full duplex socket communication.",
   "scripts": {
     "instrument": "node ./instrument/server.js 9889",
     "driver": "node ./driver/client.js 9889 localhost"

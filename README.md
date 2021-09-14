@@ -1,5 +1,5 @@
 # node-socket-sim
-This is a simple simulation between 2 instruments. The instruments here are 2 node.js applications, where one is client and other is a server. The communication between both is full duplex communication
+This is a simple simulation between 2 instruments. The instruments here are 2 node.js applications, where one is client and other is a server. The communication between both is full duplex socket communication.
 
 ## Scope
 The project has 2 Node.js applications.
