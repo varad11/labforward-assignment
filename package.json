@@ -1,19 +1,19 @@
 {
-  "name": "labforward-assignment",
+  "name": "node-socket-sim",
   "version": "1.0.0",
-  "description": "Engineering JavaScript - Integration Team - Take-Home Challenge",
+  "description": "Node.js server that establish and communicate with each other through web sockets. This is a simple simulation between to instruments.",
   "scripts": {
     "instrument": "node ./instrument/server.js 9889",
     "driver": "node ./driver/client.js 9889 localhost"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/varad11/labforward-assignment.git"
+    "url": "git+https://github.com/varad11/node-socket-sim.git"
   },
   "author": "Varad Shevade",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/varad11/labforward-assignment/issues"
+    "url": "https://github.com/varad11/node-socket-sim/issues"
   },
-  "homepage": "https://github.com/varad11/labforward-assignment#readme"
+  "homepage": "https://github.com/varad11/node-socket-sim#readme"
 }
